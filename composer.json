@@ -1,0 +1,24 @@
+{
+    "name": "morphcms/page-manager-module",
+    "type": "laravel-module",
+    "description": "Manages static pages.",
+    "authors": [
+        {
+            "name": "Codrin Axinte",
+            "email": "codrin.axinte@binomeway.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\PageManager\\": ""
+        }
+    }
+}

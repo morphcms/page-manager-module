@@ -1,0 +1,17 @@
+{
+    "name": "Page Manager",
+    "alias": "page-manager",
+    "description": "",
+    "keywords": [],
+    "priority": 1,
+    "providers": [
+        "Modules\\PageManager\\Providers\\PageManagerServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "minimumCoreVersion": "",
+    "title": "Page Manager",
+    "version": "0.0.0",
+    "author": "Binome Way"
+}
