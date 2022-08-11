@@ -10,7 +10,6 @@ use Orion\Http\Requests\Request;
 
 class PagesController extends Controller
 {
-
     protected $model = Page::class;
 
     protected $resource = PageResource::class;

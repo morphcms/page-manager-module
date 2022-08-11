@@ -4,8 +4,6 @@ namespace Modules\PageManager\Policies;
 
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
-
-
 use Modules\PageManager\Enums\PagePermission;
 use Modules\PageManager\Enums\PageStatus;
 use Modules\PageManager\Models\Page;
@@ -29,7 +27,7 @@ class PagePolicy
      */
     public function viewAny(?User $user): bool
     {
-        return !$user || $user->can(PagePermission::ViewAny->value);
+        return ! $user || $user->can(PagePermission::ViewAny->value);
     }
 
     /**
@@ -37,7 +35,7 @@ class PagePolicy
      */
     public function view(?User $user, Page $page): bool
     {
-        if (!$user) {
+        if (! $user) {
             return $page->status === PageStatus::Published;
         }
 
