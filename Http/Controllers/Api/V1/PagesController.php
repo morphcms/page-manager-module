@@ -29,11 +29,18 @@ class PagesController extends Controller
         return ['latest', 'oldest'];
     }
 
+    protected function keyName(): string
+    {
+        $locale = app()->getLocale();
+
+        return "slug->$locale";
+    }
+
     public function searchableBy(): array
     {
         $locale = app()->getLocale();
 
-        return ["title->{$locale}", "slug->{$locale}", "summary->{$locale}"];
+        return ["title->$locale", "slug->$locale", "summary->$locale"];
     }
 
     public function sortableBy(): array
@@ -42,7 +49,7 @@ class PagesController extends Controller
 
         return [
             'id',
-            "title->{$locale}",
+            "title->$locale",
         ];
     }
 
